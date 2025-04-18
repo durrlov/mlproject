@@ -40,8 +40,7 @@ class DataIngestion:
 
             return(
                 self.ingestion_config.train_data_path,
-                self.ingestion_config.test_data_path,
-                self.ingestion_config.raw_data_path
+                self.ingestion_config.test_data_path
             )
 
 

@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 
 from src.exception import CustomException
 from src.logger import logging
@@ -45,7 +45,7 @@ class DataTransformation:
             cat_pipeline = Pipeline(
                 steps=[
                     ('imputer', SimpleImputer(strategy= 'most_frequent')),
-                    ('one_hot_encoder', OneHotEncoder())
+                    ('one_hot_encoder', OneHotEncoder(handle_unknown= 'ignore'))
                 ]
             )
 
@@ -101,3 +101,5 @@ class DataTransformation:
             
         except Exception as e:
             raise CustomException(e, sys)
+        
+

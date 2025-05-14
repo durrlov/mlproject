@@ -1,0 +1,35 @@
+{
+    "cat_columns": {
+        "gender": [
+            "female",
+            "male"
+        ],
+        "race_ethnicity": [
+            "group A",
+            "group B",
+            "group C",
+            "group D",
+            "group E"
+        ],
+        "parental_level_of_education": [
+            "associate's degree",
+            "bachelor's degree",
+            "high school",
+            "master's degree",
+            "some college",
+            "some high school"
+        ],
+        "lunch": [
+            "free/reduced",
+            "standard"
+        ],
+        "test_preparation_course": [
+            "completed",
+            "none"
+        ]
+    },
+    "num_columns": [
+        "reading_score",
+        "writing_score"
+    ]
+}

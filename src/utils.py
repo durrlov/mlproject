@@ -1,6 +1,7 @@
 import os
 import sys
 import pickle
+import json
 
 from src.exception import CustomException
 from src.logger import logging
@@ -74,5 +75,27 @@ def evaluate_models(X_train, y_train, X_test, y_test, models: dict, params: dict
         return best_model, report_df
 
     
+    except Exception as e:
+        raise CustomException(e, sys)
+
+
+
+
+def save_json(file_path, obj):
+    try:
+        with open(file_path, 'w') as file_obj:
+            json.dump(obj, file_obj, indent= 4)
+
+    except Exception as e:
+        raise CustomException(e, sys)
+
+
+
+
+def load_json(file_path):
+    try:
+        with open(file_path, 'r') as file_obj:
+            return json.load(file_obj)
+        
     except Exception as e:
         raise CustomException(e, sys)
